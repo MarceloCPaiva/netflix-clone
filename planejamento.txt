@@ -1,0 +1,20 @@
+- Homepage
+- Fazer login e criar conta (Usuário e autenticação)
+    -Email
+    -Username
+    -Senha
+    -Filmes já vistos
+    -Editar PErfil
+
+- Filmes/Séries
+    -Thumb
+    -Título
+    -Descrição
+    -Categoria
+    -Qtd de Views
+    -Data de criação
+    -Episódios
+        -Título
+        -Vídeos
+
+- Barra de Pesquisa
