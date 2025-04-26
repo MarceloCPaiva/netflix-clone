@@ -1,9 +1,90 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}
 Homepage Paivaflix
 {% endblock %}
 
 {% block content %}
-<h1>Essa é a homepage do meu site</h1>
+<header class="min-h-screen bg-black bg-opacity-75 bg-blend-overlay showcase border-gray-600 border-b-8 flex justify-center items-center bg-no-repeat" style="background-image: url('{% static 'images/background_netflix.jpg' %}')">
+        <div class="z-10 h-full py-32 md:py-0 text-gray-100 text-center flex items-center flex-col">
+            <h1 class="font-semibold text-4xl md:text-5xl w-10/12 md:w-3/4 text-center">
+                Filmes e séries da Paivaflix, tudo em um só lugar.
+            </h1>
+            <h3 class="text-xl md:text-xl py-5">
+                Assista onde quiser. Cancele quando quiser.
+            </h3>
+            <h4 class="text-sm md:text-lg pb-3">
+                Quer começar? Coloque seu e-mail abaixo para acessar.
+            </h4>
+            <div class="w-full flex justify-center">
+                <div class="flex justify-center items-center w-11/12 md:w-10/12">
+                    <form method="post" class="w-6/12 justify-center">
+                        <div class="flex flex-grow items-stretch">
+                            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Digite seu e-mail..." type="email" name="e-mail"/>
+                            <button class="bg-red-600 font-medium md:font-normal flex justify-center items-center py-2 px-3 md:px-0 rounded-br-sm rounded-tr-sm md:text-2xl" type="submit">
+                                <span>
+                                    Acessar
+                                </span>
+                                <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</header>
+
+<section class="flex flex-col md:flex-row items-center border-gray-900 border-b-8" style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10 ">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Aproveite na sua TV.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Assista em Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players e muito mais.
+        </h5>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="{% static 'images/tv.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+
+<section class="flex flex-col md:flex-row items-center border-gray-900 border-b-8" style="min-height: 70vh;">
+    <div class="md:w-1/2 flex justify-center items-center ">
+        <img src="{% static 'images/mobile-0819.jpg' %}" class="w-8/12" alt="">
+    </div>
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Baixe seus programas para assistir offline.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Salve seus favoritos facilmente e sempre tenha algo para assistir.
+        </h5>
+    </div>
+</section>
+
+<section class="flex flex-col md:flex-row items-center border-gray-900 border-b-8" style="min-height: 70vh;">
+    <div class="md:w-1/2 flex flex-col justify-center text-center md:text-left p-5 md:p-10">
+        <h2 class="md:text-5xl text-4xl font-semibold mb-4">
+            Crie perfis para crianças.
+        </h2>
+        <h5 class="md:text-xl text-lg">
+            Envie as crianças em aventuras com seus personagens favoritos em um espaço feito especialmente para elas — grátis com sua assinatura.
+        </h5>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+        <img src="{% static 'images/netflix_kid.png' %}" class="w-8/12" alt="">
+    </div>
+</section>
+
+<footer class="bg-black bg-opacity-75 border-gray-600 border-t-8 px-5 py-10 text-gray-100">
+    <div class="max-w-7xl mx-auto">
+        <ul class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm md:text-base">
+            <li>&copy; 2025</li>
+            <li>Feito com <span class="text-red-600">Python (Django)</span></li>
+            <li>Desenvolvido por <a href="https://github.com/marcelopaiva" class="underline hover:text-red-600 transition-colors">Marcelo Paiva</a></li>
+        </ul>
+    </div>
+</footer>
+
 {% endblock %}
